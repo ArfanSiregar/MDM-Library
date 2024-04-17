@@ -1,7 +1,8 @@
-package com.kreditplus.mdmlibrary
+package com.kreditplus.mdmlibrary.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kreditplus.mdmlibrary.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
