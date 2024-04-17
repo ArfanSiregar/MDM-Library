@@ -10,14 +10,13 @@ import com.kreditplus.data.area.api.error.RequestTimeoutError
 import com.kreditplus.data.area.api.error.UnAuthorizationError
 import com.kreditplus.data.area.api.model.Province
 import com.kreditplus.data.area.api.repository.AreaRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@HiltViewModel
+
 class ProvinceViewModel @Inject constructor(
     private val areaRepository: AreaRepository
 ): ViewModel() {
