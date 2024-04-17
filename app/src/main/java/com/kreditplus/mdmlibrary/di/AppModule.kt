@@ -13,7 +13,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-interface AppModule {
+object AppModule {
 
     @Provides
     fun provideMoshi(): Moshi {
