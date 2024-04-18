@@ -24,12 +24,12 @@ object ApiConfig {
         .followSslRedirects(true)
         .addInterceptor {
             val newUrl = it.switchUrl(
-                url = "https://dev-api-gateway.kbfinansia.com/",
+                url = "BASE_URL",
             )
 
             val request = it.requestHeader(
                 switchUrl = newUrl,
-                apiKey = "0Kx9puSzEZ63zYimGaKUsFvglC2k3bCpGlxTEx5cZ911nPN1"
+                apiKey = "API_KEY"
             )
 
             it.proceed(request)
@@ -41,7 +41,7 @@ object ApiConfig {
         okHttpClient: OkHttpClient,
         moshi: Moshi,
     ): Retrofit = Retrofit.Builder()
-        .baseUrl("https://dev-api-gateway.kbfinansia.com/")
+        .baseUrl("BASE_URL")
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .client(okHttpClient)
         .build()
